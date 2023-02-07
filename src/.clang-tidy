@@ -1,0 +1,9 @@
+---
+Checks:                'clang-diagnostic-*,clang-analyzer-*,cppcoreguidelines-*,modernize-*,performance-*'
+WarningsAsErrors:      true
+HeaderFilterRegex:     '../include/*.h'
+AnalyzeTemporaryDtors: false
+FormatStyle:           none
+CheckOptions:
+  - key:               modernize-use-nullptr.NullMacros
+    value:             'NULL,MY_NULL'

@@ -1,0 +1,17 @@
+pipeline {
+    options {
+        buildDiscarder logRotator(numToKeepStr: '5')
+    }
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mkdir build && cd build'
+                sh 'cmake ..'
+                sh 'cmake --build .'
+                sh './app'
+                sh './app-test'
+            }
+        }
+    }
+}
