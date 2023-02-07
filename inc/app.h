@@ -5,7 +5,7 @@
 
 class App {
     private:
-        const std::string MESSAGE = "Hello World!";
+        const std::string MESSAGE = "Hello, World!";
     public:
         App() = default;
         ~App() = default;
