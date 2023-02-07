@@ -21,7 +21,9 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'ctest -T test --no-compress-output'
+                dir('build') {
+                    sh 'ctest -T test --no-compress-output'
+                }
             }
         }
     }
